@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>ime-mode</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>ime-mode</h1>
+
+
+<hr>
+<p><strong>版本：</strong>IE5+专有属性</p>
+<p><strong>语法：</strong></p>
+<p><strong>ime-mode : </strong>auto | active | inactive | disabled </p>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p><strong>auto : </strong>不影响IME的状态。与不指定ime-mode属性时相同 <br>
+  <strong>active : </strong>指定所有使用IME输入的字符。即激活本地语言输入法。用户仍可以撤销激活IME <br>
+  <strong>inactive : </strong>指定所有不使用IME输入的字符。即激活非本地语言。用户仍可以撤销激活IME <br>
+  <strong>disabled : </strong>完全禁用IME。对于有焦点的控件（如输入框），用户不可以激活IME </p>
+</font>
+</div>
+<p><strong>说明：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+<p>设置或检索是否允许用户激活输入中文，韩文，日文等的输入法（IME）状态。 <br>
+  对应的脚本特性为<strong>imeMode</strong>。</p>
+</font></div>
+
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>&lt;input type=text style=&quot;ime-mode: auto; &quot;&gt;   </div></p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>layout-grid-type</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>layout-grid-type</h1>
+
+
+<hr>
+<p><strong>版本：</strong>IE5+专有属性</p>
+<p><strong>语法：</strong></p>
+<p><strong>layout-grid-type :</strong> loose | strict | fixed</p>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p><strong>loose : </strong>指定在中文或韩文中使用网格的文本，只有象形文字，假名，宽字符域网格对齐。其余的和通常一样，尽管包含这些字符的文本范围的layout-grid-mode被设置为none或line。该模式还禁用通常用于对象文本的特殊文本对齐和字符宽度调整。最后，如果不能再换行边界的文本中找到一个换行机会，那么文本将被推至下一行，并且上一行的最后留出空白 <br>
+  <strong>strict : </strong>指定在日文中使用网格。规则为：如果没有其他的宽度调整效果，则增加宽字符以获取精确的网格填充。窄字符（除了草书字体）按照应用于宽字符的一半增量增加 <br>
+  <strong>fixed : </strong>指定使用于等宽版式网格。规则为：所有非草书符号视为等宽。默认情况下，每个字符在单一网格中居中。禁止对齐或任何其他改变字符宽度的行为 </p>
+</font>
+</div>
+<p><strong>说明：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+<p>设置或检索应用于对象文本的网格类型。<br>
+  只应用于块对象（如div）。<br>
+  以东亚语言（如中文，日文）编写的文档通常根据一维或二维网格使用字符的页面版式。 <br>
+  对应的脚本特性为<strong>layoutGridType</strong>。</p>
+</font></div>
+
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>div { layout-grid-type: strict; }  </div></p>
+<p>&nbsp;</p>
+</body>
+</html>

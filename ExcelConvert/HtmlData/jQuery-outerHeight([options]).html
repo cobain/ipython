@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>outerHeight([options])</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>outerHeight([options])</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%"><p>获取第一个匹配元素外部高度（默认包括补白和边框）。</p>
+<div style="font-size:12px">此方法对可见和隐藏元素均有效。</div></font></div>
+<p><strong>参数：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+  </font>
+  <h4><strong>options</strong></h4>
+  <p>设置为 true 时，计算边距在内。<br>
+  </p>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"></div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:获取第一段落外部高度。</h4>
+  <h5>HTML 代码::</h5>
+  <pre>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;2nd Paragraph&lt;/p&gt;</pre>
+  <h5>jQuery 代码:</h5>
+  <pre>var p = $(&quot;p:first&quot;);<br>$(&quot;p:last&quot;).text( &quot;outerHeight:&quot; 
++ p.outerHeight() + &quot; , 
+outerHeight(true):&quot; + 
+p.outerHeight(true) );
+
+结果：
+
+&lt;p&gt;Hello&lt;/p&gt;
+&lt;p&gt;outerHeight: 35 , 
+outerHeight(true):55&lt;/p&gt;</pre>
+</div>
+<p>&nbsp;</p>
+
+</body>
+</html>

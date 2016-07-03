@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <person age="18">
+    <name>hzj</name>
+    <sex>man</sex>
+ </person>
+ <person age="19" des="hello">
+    <name>kiki</name>
+    <sex>female</sex>
+ </person>
+</root>

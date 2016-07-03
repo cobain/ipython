@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>offset([coordinates])</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>offset([coordinates])</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%"><p>获取匹配元素在当前视口的相对偏移。</p>
+<div style="font-size:12px">返回的对象包含两个整型属性：top 和 left。此方法只对可见元素有效。</div></font></div>
+<p><strong>参数：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+  </font>
+  <h4><strong>coordinates</strong></h4>
+  <p>一个对象，必须包含top和left属性，作为元素的新坐标。这个参数也可以是一个返回一对坐标的函数，函数的第一个参数是元素的索引，第二个参数是当前的坐标。<br>
+  </p>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"></div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>无参数描述:获取第二段的偏移</h4>
+  <h5>HTML 代码::</h5>
+  <pre>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;2nd Paragraph&lt;/p&gt;</pre>
+  <h5>jQuery 代码:</h5>
+  <pre>var p = $(&quot;p:last&quot;);<br>var offset = p.offset();<br>p.html( &quot;left: &quot; + offset.left + &quot;, top: &quot; + offset.top );
+
+<strong>结果：</strong>
+
+&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;left: 0, top: 35&lt;/p&gt;</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>参数coordinates 描述:获取第二段的偏移</h4>
+</div>
+<p>&nbsp;</p>
+
+</body>
+</html>

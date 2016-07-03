@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>jQuery([selector,[context]])</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>jQuery(html,[ownerDocument])</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%"><p>根据提供的原始 HTML 标记字符串，动态创建由 jQuery 对象包装的 DOM 元素。同时设置一系列的属性、事件等。</p>
+<div style="font-size:12px">你可以传递一个手写的 HTML 字符串，或者由某些模板引擎或插件创建的字符串，也可以是通过 AJAX 加载过来的字符串。但是在你创建 input 元素的时会有限制，可以参考第二个示例。当然这个字符串可以包含斜杠 (比如一个图像地址)，还有反斜杠。当你创建单个元素时，请使用闭合标签或 XHTML 格式。例如，创建一个 span ，可以用 $("&lt;span/&gt;") 或 $("&lt;span&gt;&lt;/span&gt;") ，但不推荐 $("&lt;span&gt;")。在jQuery 中，这个语法等同于$(document.createElement("span")) 。</div></font></div>
+<p><strong>参数：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+  </font>
+  <h4><strong>html,[ownerDocument]</strong></h4>
+  <p><strong>html:</strong>用于动态创建DOM元素的HTML标记字符串</p>
+  <p><strong>ownerDocument:</strong>创建DOM元素所在的文档<br>
+  </p>
+</div>
+
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4><strong>html,props</strong></h4>
+  <p><strong>html</strong>:用于动态创建DOM元素的HTML标记字符串</p>
+  <p><strong>props</strong>:用于附加到新创建元素上的属性、事件和方法<br>
+  </p>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"></div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:动态创建一个 div 元素（以及其中的所有内容），并将它追加到 body 元素中。在这个函数的内部，是通过临时创建一个元素，并将这个元素的 innerHTML 属性设置为给定的标记字符串，来实现标记到 DOM 元素转换的。所以，这个函数既有灵活性，也有局限性。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>$("&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;").appendTo("body")</pre></div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:创建一个 &lt;input&gt; 元素必须同时设定 type 属性。因为微软规定 &lt;input&gt; 元素的 type 只能写一次。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>// 在 IE 中无效: $("&lt;input&gt;").attr("type", "checkbox"); 
+// 在 IE 中有效: $("&lt;input type='checkbox'&gt;");</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:动态创建一个 div 元素（以及其中的所有内容），并将它追加到 body 元素中。在这个函数的内部，是通过临时创建一个元素，并将这个元素的 innerHTML 属性设置为给定的标记字符串，来实现标记到 DOM 元素转换的。所以，这个函数既有灵活性，也有局限性。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>$("&lt;div&gt;", {  
+ "class": "test",   
+text: "Click me!",  
+ click: function(){     
+$(this).toggleClass("test");  
+ } 
+}).appendTo("body");</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:创建一个 &lt;input&gt; 元素，同时设定 type 属性、属性值，以及一些事件。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>$("&lt;input&gt;", {   
+type: "text",   
+val: "Test",   
+focusin: function() {    
+ $(this).addClass("active");   
+},  
+ focusout: function() {    
+ $(this).removeClass("active");  
+ } 
+}).appendTo("form");</pre>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

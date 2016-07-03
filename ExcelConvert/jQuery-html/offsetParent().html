@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>offsetParent()</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>offsetParent()</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p>返回第一个匹配元素用于定位的父节点。</p>
+<div style="font-size:12px">
+  <p>这返回父元素中第一个其position设为relative或者absolute的元素。此方法仅对可见元素有效。</p>
+</div>
+</font></div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"></div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:设置最近的祖先定位元素的背景颜色。</h4>
+  <h5>HTML 代码::</h5>
+  <pre>&lt;div style
+=&quot;width:70%;position:absolute;
+left:100px;top:100px&quot;&gt;<br>&lt;div style=&quot;margin:50px;
+background-color:yellow&quot;&gt;<br>&lt;p&gt;点击下面的按钮可以设置本段
+落的最近的父（祖先）元素的背景色。
+&lt;/p&gt;<br>   &lt;div&gt;<br>&lt;/div&gt;<br>&lt;button&gt;点击这里&lt;/button&gt;</pre>
+  <h5>jQuery 代码:</h5>
+  <pre>$(&quot;button&quot;).click(function(){<br>    $(&quot;p&quot;).offsetParent()
+    .css(&quot;background-color&quot;,&quot;red&quot;);<br>});
+</pre>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

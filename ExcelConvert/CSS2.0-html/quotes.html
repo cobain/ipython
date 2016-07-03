@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>quotes</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>quotes</h1>
+
+
+<hr>
+<p><strong>版本：</strong>CSS2　</p>
+<p><strong>语法：</strong></p>
+<p><strong>quotes : </strong>none | string </p>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p><strong>none :</strong> content属性的open-quote和close-quote值将不会生成任何嵌套标记 <br>
+  <strong>string :</strong> 用引号括起的嵌套标记定义。两个为一组。第一个string定义前标记（例：&quot;&lt;&quot;），第二个string定义后标记（例：&quot;&gt;&quot;）。组之间用空格格开。嵌套标记的应用深度按定义顺序内推 </p>
+</font>
+</div>
+<p><strong>说明：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+<p>设置或检索对象内使用的嵌套标记。<br>
+  目前IE5.5尚不支持此属性。 <br>
+  对应的脚本特性为<strong>quotes</strong>。<br>
+</p>
+</font></div>
+
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>blockquote[lang-=fr] { quotes: &quot;\201C&quot; &quot;\201D&quot; } <br>
+    blockquote[lang-=en] { quotes: &quot;\00AB&quot; &quot;\00BB&quot; } <br>
+    blockquote:before { content: open-quote } <br>
+    blockquote:after { content: close-quote } <br>
+    <br>
+    q { quotes: &quot;&quot;&quot; &quot;&quot;&quot; &quot;'&quot; &quot;'&quot;; } <br>
+    <br>
+    &lt;q&gt;This is an &lt;q&gt;emedded&lt;/q&gt; quote.&lt;/q&gt; <br>
+    <br>
+    显示结果如下： <br>
+    <br>
+  &quot;This is an 'embedded' quote.&quot;   </div></p>
+<p>&nbsp;</p>
+</body>
+</html>

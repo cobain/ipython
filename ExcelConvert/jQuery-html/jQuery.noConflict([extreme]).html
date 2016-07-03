@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>jQuery.noConflict([extreme])</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>jQuery.noConflict([extreme])</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p>运行这个函数将变量$的控制权让渡给第一个实现它的那个库。</p>
+<p>这有助于确保jQuery不会与其他库的$对象发生冲突。 在运行这个函数后，就只能使用jQuery变量访问jQuery对象。例如，在要用到$("div p")的地方，就必须换成jQuery("div p")。 '''注意:'''这个函数必须在你导入jQuery文件之后，并且在导入另一个导致冲突的库'''之前'''使用。当然也应当在其他冲突的库被使用之前，除非jQuery是最后一个导入的。</p>
+</font>
+</div>
+<p><strong>参数：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+  </font>
+  <h4><strong>extreme</strong></h4>
+  <p>传入 true 来允许彻底将jQuery变量还原<br>
+  </p>
+</div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:将$引用的对象映射回原始的对象。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>jQuery.noConflict(); 
+// 使用 jQuery jQuery("div p").hide(); 
+// 使用其他库的 $() 
+$("content").style.display = 'none';</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:恢复使用别名$，然后创建并执行一个函数，在这个函数的作用域中仍然将$作为jQuery的别名来使用。在这个函数中，原来的$对象是无效的。这个函数对于大多数不依赖于其他库的插件都十分有效。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>jQuery.noConflict(); 
+(function($) {    
+$(function() {     
+//使用 $ 作为 jQuery 
+别名的代码  
+ }); 
+})(jQuery); 
+// 其他用 $ 作为别名的库的代码</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:创建一个新的别名用以在接下来的库中使用jQuery对象。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>var j = jQuery.noConflict(); 
+// 基于 jQuery 的代码 
+j("div p").hide(); 
+// 基于其他库的 $() 代码 
+$("content").style.display = 'none';</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:完全将 jQuery 移到一个新的命名空间。</h4>
+  <h5>jQuery 代码:</h5>
+  <pre>var dom = {}; 
+dom.query = jQuery.noConflict(true);</pre>
+  <h5>结果:</h5>
+  <pre>// 新 jQuery 的代码 
+dom.query("div p").hide(); 
+// 另一个库 $() 的代码 
+$("content").style.display = 'none'; 
+// 另一个版本 jQuery 的代码 
+jQuery("div &gt; p").hide();</pre>
+</div>
+</body>
+</html>

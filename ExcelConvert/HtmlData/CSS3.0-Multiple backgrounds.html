@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>Multiple backgrounds</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>Multiple backgrounds</h1>
+
+
+<hr>
+<p><strong>版本：</strong>CSS3.0</p>
+<p><strong>语法：</strong></p>
+<div style="font-size:14px">
+  <p><strong>background <em>：</em></strong> [background-image] | [background-origin] | [background-clip] | [background-repeat] | [background-size] | [background-position]</p>
+</div>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<p><strong><em>&lt;background-image&gt;：</em></strong>指定或检索对象的背景图像。</p>
+<p><strong><em>&lt;background-origin&gt;：</em></strong>指定背景的显示区域。参见background-origin</p>
+<p><strong><em>&lt;background-clip&gt;：</em></strong>指定背景的裁剪区域。参见background-clip</p>
+<p><strong><em>&lt;background-repeat&gt;：</em></strong>设置或检索对象的背景图像是否及如何重复铺排。</p>
+<p><strong><em>&lt;background-size&gt;：</em></strong>指定背景图片的大小。参见background-size</p>
+<p><strong><em>&lt;background-position&gt;：</em></strong>设置或检索对象的背景图像位置。</p>
+</div>
+<p><strong>说明：</strong></p><div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>多重背景图象，可以把不同背景图象只放到一个块元素里。
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>多个图片url之间使用逗号隔开即可；如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>CSS3中在容器的多层背景，各子属性与逗号来分隔值，如果指定的值，如下：
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-image: w1, w2, w3,…, wM
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-repeat: x1, x2, x3,…, xR
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-size: y1, y2, y3,…, yS
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-position: s1, s2, s3,…, sP
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>当背景层的数值是N = max(M,R, S, P)
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>每个属性可以假如它的值为n，通过重复指定的值如下所示：
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-image: w1,…wM, w1,…wM, w1,… /* N values */
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-repeat: x1,…xR, x1,…xR, x1,… /* N values */
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-size: y1,…yS, y1,…yS, y1,… /* N values */
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-position: s1,…rP, s1,…rP, s1,… /* N values */
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>范例书写：
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>background-image:url(img/multiple-backgrounds.png),</p>
+  <p> url(img/multiple-backgrounds.png), </p>
+  <p>url(img/multiple-backgrounds.png);</p>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-position: left top, -320px bottom, -640px top;
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>background-repeat: no-repeat, no-repeat, repeat-y;
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><p>也可以简写：
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+<p>background:url(img/multiple-backgrounds.png) left top no-repeat,</p>
+<p>url(img/multiple-backgrounds.png)-320px bottom no-repeat,</p>
+<p>url(img/multiple-backgrounds.png)-640px top repeat-y;</p>
+</div>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

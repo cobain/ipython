@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>overflow</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>overflow</h1>
+
+
+<hr>
+<p><strong>版本：</strong>CSS2</p>
+<p><strong>语法：</strong></p>
+<p><strong>overflow : </strong>visible | auto | hidden | scroll </p>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p><strong>visible : </strong>不剪切内容也不添加滚动条。假如显式声明此默认值，对象将被剪切为包含对象的window或frame的大小。并且clip属性设置将失效 <br>
+  <strong>auto : </strong>此为body对象和textarea的默认值。在需要时剪切内容并添加滚动条 <br>
+  <strong>hidden : </strong>不显示超过对象尺寸的内容<br>
+  <strong>scroll : </strong>总是显示滚动条 </p>
+</font>
+</div>
+<p><strong>说明：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+<p>检索或设置当对象的内容超过其指定高度及宽度时如何管理内容。<br>
+  设置textarea对象为hidden值将隐藏其滚动条。<br>
+  对于table来说，假如table-layout属性设置为fixed，则td对象支持带有默认值为hidden的overflow属性。如果设为hidden，scroll或者auto，那么超出td尺寸的内容将被剪切。如果设为visible，将导致额外的文本溢出到右边或左边（视direction属性设置而定）的单元格。<br>
+  自IE5开始，此属性在MAC平台上可用。 <br>
+  对应的脚本特性为<strong>overflow</strong>。</p>
+</font></div>
+
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>body { overflow: hidden; }<br>
+  div { overflow: scroll; height: 100px; width: 100px; }   </div></p>
+<p>&nbsp;</p>
+</body>
+</html>

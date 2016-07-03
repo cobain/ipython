@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>border-width</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>border-width</h1>
+
+
+<hr>
+<p><strong>版本：</strong>CSS1　</p>
+<p><strong>语法：</strong></p>
+<p><strong>border-width : </strong>medium | thin | thick |<em> length </em></p>
+<p><strong>取值：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p><strong>medium : </strong>默认宽度<br>
+  <strong>thin : </strong>小于默认宽度<br>
+  <strong>thick : </strong>大于默认宽度<br>
+  <em>length : </em>由浮点数字和单位标识符组成的长度值。不可为负值。</p>
+</font>
+</div>
+<p><strong>说明：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+<p>如果提供全部四个参数值，将按上－右－下－左的顺序作用于四个边框。<br>
+  如果只提供一个，将用于全部的四条边。<br>
+  如果提供两个，第一个用于上－下，第二个用于左－右。<br>
+  如果提供三个，第一个用于上，第二个用于左－右，第三个用于下。<br>
+  要使用该属性，必须先设定对象的height或width属性，或者设定position属性为absolute。<br>
+  如果border-style设置为none，本属性将失去作用。 <br>
+  对应的脚本特性为<strong>borderWidth</strong>。<br>
+</p>
+</font></div>
+
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph">
+  <p>span { border-style: solid; border-width: thin; } <br>
+  span { border-style: solid; border-width: 1px thin; }   </div></p>
+<p>&nbsp;</p>
+</body>
+</html>

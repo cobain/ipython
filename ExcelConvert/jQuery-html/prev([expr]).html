@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    
+    <!-- [portable options] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+    <!-- [SEO] -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Lukas Postulka, http://www.shoujicms.net"> 
+        
+<title>prev([expr])prev([expr])</title>
+        
+    <!-- [loading stylesheets] -->    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />      
+    
+    <!-- [loading fonts] -->    
+    <script src="../../../use.edgefonts.net/istok-web.js"></script> 
+    <link href='fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    
+   
+    body p {
+	font-family: Helvetica Neue Light;
+}
+    h1 {
+	font-family: Helvetica Neue Light;
+}
+    p {
+	font-family: Heiti SC Light;
+}
+    </style>
+            
+    <!-- [loading scripts] -->   
+		
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+        
+</head>
+
+<body>
+
+<h1>prev([expr])</h1>
+
+
+<hr>
+<p><strong>概述：</strong></p>
+<div style="font-size:14px">
+<font style="line-height:200%">
+<p>取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合。</p>
+<div style="font-size:12px">
+  <p>可以用一个可选的表达式进行筛选。只有紧邻的同辈元素会被匹配到，而不是前面所有的同辈元素。</p>
+</div></font></div>
+<p><strong>参数：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%">
+  </font>
+  <h4><strong>expr</strong></h4>
+  <p>用于筛选前一个同辈元素的表达式<br>
+  </p>
+</div>
+<p><strong>示例：</strong></p>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:找到每个段落紧邻的前一个同辈元素。</h4>
+  <h5>HTML 代码::</h5>
+  <pre>&lt;p&gt;Hello&lt;/p&gt;
+&lt;div&gt;
+&lt;span&gt;Hello Again&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;And Again
+&lt;/p&gt;</pre>
+  <h5>jQuery 代码:</h5>
+  <pre>$(&quot;p&quot;).prev()</pre>
+  <h5>结果:</h5>
+  <pre>[ 
+&lt;div&gt;&lt;span&gt;Hello Again
+&lt;/span&gt;&lt;/div&gt; 
+]</pre>
+</div>
+<div style="font-size:14px;width:300;text-align:justify; text-justify:inter-ideograph"><font style="line-height:200%"> </font>
+  <h4>描述:找到每个段落紧邻的前一个同辈元素中类名为selected的元素。</h4>
+  <h5>HTML 代码::</h5>
+  <pre>&lt;div&gt;
+&lt;span&gt;Hello&lt;/span&gt;
+&lt;/div&gt;
+&lt;p class=&quot;selected&quot;&gt;
+Hello Again
+&lt;/p&gt;&lt;p&gt;And Again&lt;/p&gt;</pre>
+  <h5>jQuery 代码:</h5>
+  <pre>$(&quot;p&quot;).prev(&quot;.selected&quot;)</pre>
+  <h5>结果:</h5>
+  <pre>[ 
+&lt;p class=&quot;selected&quot;&gt;
+Hello Again
+&lt;/p&gt; 
+]</pre>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

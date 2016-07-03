@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+<info organisation="telenav" module="NavigationSDK" revision="2.1.2.100899" status="release" publication="20131023024055">
+   <description>Published by hq-clientb-02</description>
+</info>
+<publications>
+   <artifact name="NavigationSDK" ext="zip" type="zip"/>
+</publications>
+<dependencies>
+   <dependency org="telenav" name="EventManager" rev="1.4.99418"/>
+   <dependency org="telenav" name="Protobuf" rev="2.4.1.94716"/>
+   <dependency org="telenav" name="MicroRoutingService" rev="1.9.21530"/>
+   <dependency org="telenav" name="MicroMapDisplayService" rev="1.9.24161"/>
+   <dependency org="telenav" name="MicroSearchService" rev="1.9.21531"/>
+   <dependency org="telenav" name="TextToSpeech" rev="1.0.97904"/>
+   <dependency org="telenav" name="NavEngine" rev="4.3.22416"/>
+   <dependency org="telenav" name="TnUrl" rev="1.1.100117" revConstraint="1.1.+"/>
+   <dependency org="telenav" name="MapDisplayGraphics" rev="2.3.31027"/>
+   <dependency org="telenav" name="CserverAccessLib" rev="1.4.99342" revConstraint="1.4.+"/>
+   <dependency org="telenav" name="ThreadPool" rev="1.0.95762"/>
+   <dependency org="telenav" name="CJSON" rev="1.0.93078"/>
+   <dependency org="telenav" name="Foundation" rev="1.1.99932" revConstraint="1.1.+"/>
+   <dependency org="telenav" name="NavigationSDKBase" rev="2.1.100005"/>
+   <dependency org="telenav" name="GTest" rev="1.6.0.93080"/>
+   <dependency org="telenav" name="CarConnectSDK" rev="2.004.16957"/>
+   <dependency org="telenav" name="GoogleBreakpad" rev="1.0.95541" revConstraint="1.0.+"/>
+</dependencies>
+</ivy-module>

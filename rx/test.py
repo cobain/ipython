@@ -31,3 +31,9 @@ ys = xs * 4
 req = urllib2.Request("http://www.baidu.com/")
 fd = urllib2.urlopen(req)
 print fd.headers['Content-Type']
+
+xs = Observable.from_([1,2,3,4,5,6])
+ys = xs.to_blocking()
+zs = (x*x for x in ys if x > 3)
+for x in zs:
+    print(x)

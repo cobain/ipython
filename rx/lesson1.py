@@ -58,3 +58,15 @@ xs = Observable.range(1, 5)
 ys = Observable.from_("abcde")
 zs = xs.merge(ys).subscribe(MyObserver())
 
+#Subjects and Streams
+from rx.subjects import Subject
+
+stream = Subject()
+stream.on_next(41)
+
+d = stream.subscribe(MyObserver())
+stream.on_next(42)
+d.dispose()
+
+stream.on_next(43)
+

@@ -2,7 +2,7 @@ import time
 import urllib
 import urllib2
 
-url = 'http://blog.csdn.net/zhtsuc/article/details/54620197'
+url = 'http://pdfmergefree.com'
 #url = 'http://blog.csdn.net/zhtsuc/article/details/54577773'
 
 user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
@@ -12,7 +12,7 @@ values = {'name': 'cobain',
 
 headers = {'User-Agent': user_agent}
 data = urllib.urlencode(values)
-req = urllib2.Request(url, data, headers)
+req = urllib2.Request(url, None, headers)
 cnt = 1
 while cnt <= 10000:
     response = urllib2.urlopen(req)

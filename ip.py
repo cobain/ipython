@@ -21,11 +21,16 @@ import redis
 pool = redis.ConnectionPool(host='127.0.0.1', port=6379, db=0)
 r = redis.StrictRedis(connection_pool = pool)
 
-r.zadd('cobain', 1, 'value1');
-r.zadd('cobain', 2, 'value2');
-r.zadd('cobain', 4, 'value4');
-r.zadd('cobain', 3, 'value3');
+r.zadd('cobain', 1, 'value1')
+r.zadd('cobain', 2, 'value2')
+r.zadd('cobain', 4, 'value4')
+r.zadd('cobain', 3, 'value3')
 
 print r.zrange('cobain', 0, -1, withscores=True)
 
 print r.zrank('cobain', 'value1')
+
+r.lpush('llll', 'cobain1')
+r.lpush('llll', 'cobain2')
+r.ltrim('llll', 0, 5)
+print r.lrange('llll', 0, 99)

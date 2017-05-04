@@ -69,3 +69,16 @@ print r.incr("visit:1237:totals")
 print r.incr("visit:1237:totals")
 print r.get ("visit:1237:totals")
 
+
+r.sadd('circle:game:lol','user:debugo')
+r.sadd('circle:game:lol','user:leo')
+r.sadd('circle:game:lol','user:Guo')
+
+r.sadd('circle:soccer:InterMilan','user:Guo')
+r.sadd('circle:soccer:InterMilan','user:Levis')
+r.sadd('circle:soccer:InterMilan','user:leo')
+
+print r.smembers('circle:game:lol')
+print r.sinter('circle:game:lol', 'circle:soccer:InterMilan')
+print r.sunion('circle:game:lol', 'circle:soccer:InterMilan')
+

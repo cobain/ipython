@@ -34,3 +34,38 @@ r.lpush('llll', 'cobain1')
 r.lpush('llll', 'cobain2')
 r.ltrim('llll', 0, 5)
 print r.lrange('llll', 0, 99)
+
+
+r.set('name','cobain')
+print r.get('name')
+print r['name']
+
+print r.keys()
+
+print r.delete('name')
+r.save()
+
+print r.get('name')
+
+print r.flushdb()
+
+p = r.pipeline()
+p.set('hello','redis')
+p.sadd('faz','baz')
+p.incr('num')
+print p.execute()
+
+print r.get('hello')
+print r.get('num')
+
+print p.set('hello','redis').sadd('faz','baz').incr('num').execute()
+print r.get('num')
+
+r.save()
+print r.get('num')
+
+r.set("visit:1237:totals",34634)
+print r.incr("visit:1237:totals")
+print r.incr("visit:1237:totals")
+print r.get ("visit:1237:totals")
+

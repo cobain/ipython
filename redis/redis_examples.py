@@ -82,3 +82,9 @@ print r.smembers('circle:game:lol')
 print r.sinter('circle:game:lol', 'circle:soccer:InterMilan')
 print r.sunion('circle:game:lol', 'circle:soccer:InterMilan')
 
+
+print r.keys()
+
+r.hmset('hmsettest', {'name':'cobain', 'address':'xi\'an'})
+print r.hmget('hmsettest', 'name', 'address')
+

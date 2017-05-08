@@ -88,3 +88,4 @@ print r.keys()
 r.hmset('hmsettest', {'name':'cobain', 'address':'xi\'an'})
 print r.hmget('hmsettest', 'name', 'address')
 
+print r.randomkey()

@@ -69,3 +69,13 @@ if __name__ == '__main__':
     async_call(func_c, handle_result, 1, 2, 3, 4)
 
     _task_queue.join()
+    async_call(func_a, handle_result, 1, 2)
+
+    async_call(func_a, handle_result, 1, 2)
+
+    async_call(func_a, handle_result, 1, 2)
+    async_call(func_a, handle_result, 1, 2)
+    async_call(func_a, handle_result, 1, 2)
+    async_call(func_a, handle_result, 1, 2)
+    async_call(func_a, handle_result, 1, 2)
+    async_call(func_a, handle_result, 1, 2)

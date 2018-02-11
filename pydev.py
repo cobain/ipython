@@ -7,112 +7,38 @@ import re
 import socket
 import urllib
 
-timeout = 60
-socket.setdefaulttimeout(timeout)
-
-
-def getTable():
-
-    f = open('kvpage.html')
-    page = f.readlines()
-    f.close()
-    pattern = re.compile(r'.*<tbody>(.*?)</tbody>.*')
-
-    for line in page:
-        #print line
-        m = pattern.match(line.strip())
-        if m is not None:
-            return m.group(1)
-
-    return None
-
-def extractKvEvents(content):
-
-    #init result
-    table = []
-
-    #init pattern
-    patternTR = re.compile(r"<tr>(.*?)</tr>")
-    patternTD = re.compile(r'<td class="confluenceTd">(.*?)</td>')
-
-    #search all the rows
-    allrows = patternTR.findall(content)
-    if allrows is not None:
-        for row in allrows:
-            #print row
-            cols = patternTD.findall(row)
-            if cols is not None:
-
-                table.append(cols)
-
-    return table
-
-def outputToExcel(table):
-    for row in table:
-        print row
-
-def loginWiki():
-
-    httpClient = None
-    try:
-        params = urllib.urlencode({'os_username': 'xxxx@xxx.com',
-                                   'os_password': 'xxxx',
-                                   'login': 'Log In'})
-
-        headers = {"Accept-Encoding": "gzip, deflate"}
-
-        httpClient = httplib.HTTPConnection("182.92.110.241", None, timeout=30)
-        httpClient.request("GET", "/app/gethotemos", None, headers)
-
-        response = httpClient.getresponse()
-        print response.status
-        print response.reason
-        print response.read()
-        print response.getheaders()
-
-    except Exception, e:
-        print e
-    finally:
-        if httpClient:
-            httpClient.close()
-
-def catchPage():
-    httpClient = None
-
-    try:
-        #read cookie
-        f = open('cookie.txt')
-        cookie = f.read().strip()
-        print cookie
-        f.close()
-
-        #init headers
-        headers = {"Content-type": "application/x-www-form-urlencoded",
-                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-                    'Cookie': cookie}
-
-        #send request
-        httpClient = httplib.HTTPConnection('xxx.com', 8080, timeout=30)
-        httpClient.request('GET', '/xxxPath', headers=headers)
-
-        #response是HTTPResponse对象
-        response = httpClient.getresponse()
-        print response.status
-        print response.reason
-
-        htmlPage = open('kvpage.html', 'w')
-        htmlPage.write(response.read())
-        htmlPage.close()
-    except Exception, e:
-        print e
-    finally:
-        if httpClient:
-            httpClient.close()
-
-if __name__ == '__main__':
-
-    loginWiki()
+a = [1,2,3]
+b = {'a':1,'b':2,'c':3}
+c = True
+print type(a),type(b),type(c) # <type 'list'> <type 'dict'> <type 'bool'>
+print isinstance(a,list)  # True
 
 
 
+class Singleton(object):
+    def __new__(cls, *args, **kw):
+        if not hasattr(cls, '_instance'):
+            orig = super(Singleton, cls)
+            cls._instance = orig.__new__(cls, *args, **kw)
+        return cls._instance
 
+class MyClass(Singleton):
+    a = 1
+
+myclass = MyClass()
+myclass.a = 2
+
+testlcass2 = MyClass()
+print testlcass2.a
+
+def singleton(cls, *args, **kw):
+    instances = {}
+    def getinstance():
+        if cls not in instances:
+            instances[cls] = cls(*args, **kw)
+        return instances[cls]
+    return getinstance
+
+@singleton
+class MyClass:
+    pass

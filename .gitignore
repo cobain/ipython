@@ -1,2 +1,4 @@
 .idea
 importData/importData.py
+**/*.DS_Store
+

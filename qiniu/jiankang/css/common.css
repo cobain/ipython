@@ -1,0 +1,37 @@
+html,body {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.flex-con {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-hcenter {
+    -webkit-justify-content: center;;
+    justify-content: center;
+}
+
+.flex-vcenter {
+    -webkit-align-items: center;;
+    align-items: center;
+}
+
+.space-beteen {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.space-around {
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.flex-1 {
+    -webkit-flex: 1;
+    flex: 1;
+}

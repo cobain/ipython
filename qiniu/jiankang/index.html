@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+  <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+  <link rel="stylesheet" type="text/css" href="css/common.css" />
+  <title>白草正元</title>
+  <style>
+    .wrapper {
+      text-align: center;
+      font-size: .5rem;
+      padding-top: 2rem;
+    }
+    .title {
+      font-size: .6rem;
+      margin-bottom: 1rem;
+    }
+    .desc {
+      font-size: .4rem;
+      margin-top: 2rem;
+      line-height: .7rem;
+    }
+    .wechat {
+      font-size: .4rem;
+    }
+    .qrcode img {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title"> 百草正元关爱男性健康</div>
+    <div class="qrcode">
+      <img src="" id="qr_img">
+      <div class="wechat flex-con flex-vcenter flex-hcenter">
+        <span>微信：</span>
+        <span id="wechat"></span>
+      </div>
+    </div>
+    <div class="desc">
+      <div>长按识别二维码添加客服</div>
+      <div>免费申领健康礼品（每人限领取一份）</div>
+      <div>专业客服为您时时健康咨询</div>
+      <div>24小时为您健康保驾护航</div>
+    </div>
+  </div>
+</body>
+<script src="http://orxrba6oo.bkt.clouddn.com/adapter.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var users = [
+      { name: 'lin18681997803', image: 'lin18681997803.jpeg' },{ name: 'L18628575901', image: 'L18628575901.jpeg' },
+      { name: 'guojia13892009427', image: 'guojia13892009427.jpeg' },{ name: 'bczy06', image: 'bczy06.jpeg' },
+      { name: 'bczy02', image: 'bczy02.jpeg' },{ name: 'L15591018971', image: 'L15591018971.jpg' },
+    ]
+    var localStorage = window.localStorage
+    var userIndex = localStorage.getItem('BCZY')
+    var user;
+    if (userIndex) {
+      user = users[parseInt(userIndex)]
+    } else {
+      var index = Math.floor(Math.random()*(users.length - 1));
+      localStorage.setItem('BCZY', index)
+      user = users[index]
+    }
+    $('#qr_img').attr('src', 'images/'+user.image)
+    $('#wechat').text(user.name)
+  })
+</script>
+</html>

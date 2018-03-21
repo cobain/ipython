@@ -15,8 +15,9 @@ import sys
 
 access_key = '3VxEZO5kKePlO3QMmk7yUbkRN0BUzywqzVXrRZ7v'
 secret_key = '9hImgUbpYeQzIsVdu0-YEE0fgsEbJ1VnxnJD5exU'
-bucket_name = 'website'
-bucket_domain = 'p4upn33xm.bkt.clouddn.com'
+bucket_name = 'about'
+bucket_domain = 'p5dr0q0hv.bkt.clouddn.com'
+
 # access_key = ''
 # secret_key = ''
 # bucket_name = ''
